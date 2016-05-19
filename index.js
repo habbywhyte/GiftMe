@@ -16,9 +16,6 @@ app.engine(".hbs", hbs({
   defaultLayout: "layout-main"
 }));
 
-app.get("/", function(req, res){
-  res.render("layout-main", {layout: false});
-});
 
 app.get("/api/users", function(req, res){
   User.find().then(function(users){
@@ -26,10 +23,20 @@ app.get("/api/users", function(req, res){
   });
 });
 
+app.get("/api/users/:_id", function (req,res){
+  User.findOne(req.params).then(function(user){
+    res.json(user);
+  });
+});
+
 app.post("/api/users", function(req, res){
   User.create(req.body).then(function(user){
     res.json(user);
   });
+});
+
+app.get("/*", function(req, res){
+  res.render("layout-main", {layout: false});
 });
 
 app.listen(3001, function(){

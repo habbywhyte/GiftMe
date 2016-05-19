@@ -8,10 +8,12 @@
   ])
   .config(Router)
   .factory("User", UserFactory)
-  .controller("Index", IndexCtrl);
+  .controller("Index", IndexCtrl)
+  .controller("Show", ShowCtrl);
 
-  Router.$inject = ["$stateProvider"];
-  function Router($stateProvider){
+  Router.$inject = ["$stateProvider", "$locationProvider"];
+  function Router($stateProvider, $locationProvider){
+    $locationProvider.html5Mode(true);
     $stateProvider
     .state("index", {
       url:  "/",
@@ -21,7 +23,9 @@
     })
     .state("show", {
       url:  "/:_id",
-      templateUrl: "/assets/html/users-show.html"
+      templateUrl: "/assets/html/users-show.html",
+      controller: "Show",
+      controllerAs: "ShowVM"
   });
 }
 UserFactory.$inject =["$resource"];
@@ -34,11 +38,17 @@ IndexCtrl.$inject= ["User"];
 function IndexCtrl(User){
   var vm =this;
   vm.users =User.query();
-  vm.create   =function(){
+  vm.create =function(){
     User.save(vm.newUser, function(response){
       vm.users.push(response);
     });
   }
+}
+
+ShowCtrl.$inject = ["User", "$stateParams"];
+function ShowCtrl(User, $stateParams){
+  var vm = this;
+  vm.user = User.get($stateParams);
 }
 
 })();

@@ -1,1 +1,6 @@
-<h1>This is not the Index; it's a show page!</h1> 
+<h2>{{Show.VM.user.name}}</h2>
+<ul class="gifts">
+  <li data-ng-repeat="gift in ShowVM.user.gifts">
+    {{gift.name}}
+  </li>
+</ul>
