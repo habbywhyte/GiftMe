@@ -1,0 +1,14 @@
+<ul>
+  <li data-ng-repeat="user in IndexVm.users">
+    <h2>{{user.name}}</h2>
+    <ul>
+      <li data-ng-repeat= "gift in user.gifts">
+        {[gift.name]}
+      </li>
+    </ul>
+  </li>
+  <div class="inputName">
+    <input type="text" data-ng-model="IndexVM.newUser.name" />
+    <button data-ng-click="IndexVM.create()">Add your Name</button>
+</div>
+</ul>
