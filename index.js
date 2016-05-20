@@ -13,7 +13,7 @@ app.engine(".hbs", hbs({
   extname:    ".hbs",
   layoutsDir: "views",
   partialsDir: "views",
-  defaultLayout: "layout-main"
+  defaultLayout: "main"
 }));
 
 
@@ -36,7 +36,7 @@ app.post("/api/users", function(req, res){
 });
 
 app.get("/*", function(req, res){
-  res.render("layout-main", {layout: false});
+  res.render("main", {layout: false});
 });
 
 app.listen(3001, function(){

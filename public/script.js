@@ -36,19 +36,26 @@ function UserFactory($resource){
 
 IndexCtrl.$inject= ["User"];
 function IndexCtrl(User){
-  var vm =this;
-  vm.users =User.query();
-  vm.create =function(){
+  var vm = this;
+  vm.users = User.query();
+  vm.create = function(){
     User.save(vm.newUser, function(response){
+      console.log(response)
       vm.users.push(response);
     });
   }
 }
 
-ShowCtrl.$inject = ["User", "$stateParams"];
-function ShowCtrl(User, $stateParams){
+ShowCtrl.$inject = ["User", "$stateParams", "$state"];
+function ShowCtrl(User, $stateParams, $state){
   var vm = this;
   vm.user = User.get($stateParams);
-}
+  vm.update = function(){
+    User.update($stateParams, vm.user, function(response){
+      $state.reload();
+    });
+  }
+
+  }
 
 })();

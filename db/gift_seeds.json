@@ -3,40 +3,32 @@
     "name": "James",
     "birthday":  "June 23, 2011",
     "gift": [
-      {
-        "name":  "Captain America Costume",
-        "amazon_url": "http://www.amazon.com/Rubies-Costume-Avengers-Captain-America/dp/B00S7L5WAM/ref=sr_1_3?s=apparel&ie=UTF8&qid=1463675231&sr=1-3&nodeID=7141123011&keywords=kids+boys+toys+captain+america"
-      }
+      {"name":  "Captain America Costume"},
+        {"amazon_url": "http://www.amazon.com/Rubies-Costume-Avengers-Captain-America/dp/B00S7L5WAM/ref=sr_1_3?s=apparel&ie=UTF8&qid=1463675231&sr=1-3&nodeID=7141123011&keywords=kids+boys+toys+captain+america"}
     ]
   },
   {
     "name": "Katherine",
     "birthday":  "September 9, 2008",
     "gift": [
-      {
-        "name":  "Music Box",
-        "amazon_url": "http://www.amazon.com/Aviator-Sunglasses-Metal-Stylish-Fashion/dp/B00LJX8UIG/ref=sr_1_2?ie=UTF8&qid=1463674862&sr=8-2&keywords=sunglasses"
-      }
+      {"name":  "Music Box"},
+        {"amazon_url": "http://www.amazon.com/Aviator-Sunglasses-Metal-Stylish-Fashion/dp/B00LJX8UIG/ref=sr_1_2?ie=UTF8&qid=1463674862&sr=8-2&keywords=sunglasses"}
     ]
   },
   {
     "name": "Vivienne",
     "birthday":  "September 1, 2010",
     "gift": [
-      {
-        "name":  "Music Box",
-        "amazon_url": "http://www.amazon.com/Aviator-Sunglasses-Metal-Stylish-Fashion/dp/B00LJX8UIG/ref=sr_1_2?ie=UTF8&qid=1463674862&sr=8-2&keywords=sunglasses"
-      }
+      {"name":  "Music Box"},
+        {"amazon_url": "http://www.amazon.com/Aviator-Sunglasses-Metal-Stylish-Fashion/dp/B00LJX8UIG/ref=sr_1_2?ie=UTF8&qid=1463674862&sr=8-2&keywords=sunglasses"}
     ]
   },
   {
     "name": "Noelle",
     "birthday":  "August 27, 2012",
     "gift": [
-      {
-        "name":  "Music Box",
-        "amazon_url": "http://www.amazon.com/Aviator-Sunglasses-Metal-Stylish-Fashion/dp/B00LJX8UIG/ref=sr_1_2?ie=UTF8&qid=1463674862&sr=8-2&keywords=sunglasses"
-      }
+      {"name":  "Music Box"},
+        {"amazon_url": "http://www.amazon.com/Aviator-Sunglasses-Metal-Stylish-Fashion/dp/B00LJX8UIG/ref=sr_1_2?ie=UTF8&qid=1463674862&sr=8-2&keywords=sunglasses"}
     ]
   }
 ]

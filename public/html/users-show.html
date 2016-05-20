@@ -1,6 +1,12 @@
-<h2>{{Show.VM.user.name}}</h2>
+<h2>Name: {{ShowVM.user.name}}</h2>
+<h2>Birthday: {{ShowVM.user.birthday}}</h2>
 <ul class="gifts">
-  <li data-ng-repeat="gift in ShowVM.user.gifts">
+  <li data-ng-repeat="gift in ShowVM.user.gift">
     {{gift.name}}
   </li>
 </ul>
+<div>
+  <input type="text" data-ng-model="ShowVM.user.name" />
+  <input type="text" data-ng-model="ShowVM.user.birthday" />
+  <button data-ng-click="ShowVM.update()">Edit</button>
+</div>
