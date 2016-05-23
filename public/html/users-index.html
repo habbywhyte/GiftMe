@@ -1,10 +1,10 @@
-<ul class ="users">
-  <li data-ng-repeat="user in IndexVm.users">
-    <h2>{<a data-ui-sref ="show(user)">{user.name}}</a></h2>
+<ul class="users">
+  <li data-ng-repeat="user in IndexVM.users">
+    <h2><a data-ui-sref="show(user)">{{user.name}}</a></h2>
 
-    <ul class = "gifts">
-      <li data-ng-repeat= "gift in user.gifts">
-        {[gift.name]}
+    <ul class="gifts">
+      <li data-ng-repeat="gift in user.gifts">
+        <h3>{{gift.name}}</h3>
       </li>
     </ul>
   </li>
